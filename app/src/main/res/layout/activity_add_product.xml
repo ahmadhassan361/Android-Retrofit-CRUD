@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".AddProduct">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#222222"
+        android:id="@+id/action_bar"
+        >
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/btnBack"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Add Product"
+            android:id="@+id/tvHeading"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_bar"
+        >
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="15dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edt"
+                android:paddingVertical="10dp"
+                android:textSize="18sp"
+                android:id="@+id/etName"
+                android:hint="Product Name"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edt"
+                android:paddingVertical="10dp"
+                android:textSize="18sp"
+                android:id="@+id/etDesc"
+                android:inputType="text|textMultiLine"
+                android:lines="6"
+                android:maxLines="6"
+                android:gravity="start"
+                android:layout_marginTop="5dp"
+                android:hint="Product Description"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:importantForAutofill="no" />
+            <EditText
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edt"
+                android:paddingVertical="10dp"
+                android:textSize="18sp"
+                android:id="@+id/etPrice"
+                android:hint="Price $"
+                android:importantForAutofill="no"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="number"/>
+            <EditText
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edt"
+                android:paddingVertical="10dp"
+                android:textSize="18sp"
+                android:id="@+id/etImage"
+                android:hint="Image URL"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Stock"
+                android:textColor="@color/white"
+                android:id="@+id/etStock"
+                android:textSize="16sp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#222222"
+                android:text="Add Product"
+                android:textAllCaps="false"
+                android:id="@+id/btnAdd"
+                />
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
